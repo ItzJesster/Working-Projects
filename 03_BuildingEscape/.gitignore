@@ -1,0 +1,13 @@
+########################
+#Unreal Generated Files#
+########################
+*/Binary
+*/Build
+*/DataDeriveCache
+*/Intermediate
+*/Saved
+BuildingEscape/Content/StarterContent/
+###############################
+#Visual Studio Generated Files#
+###############################
+BuildingEscape/.vs/
