@@ -21,6 +21,8 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	void OpenDoor();
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -35,4 +37,8 @@ private:
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* PressurePlate;
 	
+	UPROPERTY(EditAnywhere)
+	AActor* ActorThatOpens; //Remember pawn inherits from actor
+
+	//TODO - solve for why door is not opening on pressure but instead is just always open when actor is possessed
 };
