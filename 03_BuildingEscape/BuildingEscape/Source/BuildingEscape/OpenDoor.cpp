@@ -19,6 +19,7 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
 void UOpenDoor::OpenDoor()
@@ -43,7 +44,9 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	// If the ActorThatOpensis in the volume
 	if (PressurePlate->IsOverlappingActor(ActorThatOpens))
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Overlapping now"));
 		OpenDoor();
+		UE_LOG(LogTemp, Warning, TEXT("Finished Overlapping now"));
 	}
 
 }
